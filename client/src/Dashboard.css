@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #ECF0F1; /* Light grey for the entire page background */
+  }
+  
+  .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px 15px 30px;
+      background: #2C3E50; /* Deep teal */
+      color: white;
+  }
+  
+  .dashboard {
+      padding: 20px;
+      background-color: #F8F9F9; /* Soft, light greyish teal for the dashboard background */
+      min-height: 100vh; /* Ensures the dashboard takes the full height of the screen */
+  }
+  
+  .profile {
+      position: relative;
+      display: flex;
+      align-items: center;
+  }
+  
+  .profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+  
+  .profile .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%; /* Position the dropdown just below the profile icon */
+      right: 0;
+      background: white;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      min-width: 150px; /* Set a minimum width for the dropdown */
+      z-index: 10;
+  }
+  
+  .profile:hover .dropdown {
+      display: block;
+  }
+  
+  .dropdown a {
+      padding: 10px;
+      display: block;
+      color: #2C3E50; /* Deep teal for the dropdown text */
+      text-decoration: none;
+      text-align: left; /* Align text to the left */
+  }
+  
+  .dropdown a:hover {
+      background: #ddd;
+  }
+  
+  .dropdown::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: transparent transparent white transparent; /* Arrow pointing to the icon */
+  }
+  
+  .search-bar {
+      margin: 20px 0; /* Top and bottom margins */
+      padding: 0 2.5em;
+      width: 95%; /* Set a reasonable width */
+      /* max-width: 500px; Cap the maximum width */
+      position: relative;
+  }
+  
+  .search-bar input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border-radius: 5px;
+      border: 1px solid #BDC3C7; /* Light grey border */
+      color: #2C3E50; /* Deep teal text color */
+  }
+  
+  .suggestions-list {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      background: white;
+      width: 97%; /* Match the width of the input */
+      border: 1px solid #BDC3C7; /* Light grey border */
+      border-radius: 0 0 5px 5px; /* Rounded corners only on the bottom */
+      max-height: 150px;
+      overflow-y: auto;
+      z-index: 10;
+  }
+  
+  .suggestions-list li {
+      padding: 10px;
+      cursor: pointer;
+  }
+  
+  .suggestions-list li:hover {
+      background-color: #ECF0F1; /* Lightened background on hover */
+  }
+  
+  .cards-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+  }
+  
+  .suggestions-list li.highlighted {
+    background-color: #d3d3d3;
+  }
+  

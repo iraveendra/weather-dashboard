@@ -1,0 +1,87 @@
+.city-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #BDC3C7; /* Light grey border */
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 30%; /* Adjust width to allow 3-4 cards per line */
+    box-sizing: border-box;
+    background-color: #ECF0F1; /* Light grey background */
+}
+
+.delete-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #E74C3C; /* Red for delete icon */
+}
+
+.city-card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.city-info {
+    flex: 1;
+}
+
+.city-info h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #2C3E50; /* Deep teal */
+}
+
+.weather-description {
+    margin: 10px 0;
+    font-size: 1.2em;
+    color: #2980B9; /* Deep sky blue */
+}
+
+.temperature-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25em 0;
+    font-size: 1em;
+    color: #2C3E50; /* Deep teal */
+}
+
+.temperature {
+    margin: 0;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    background: #27AE60; /* Green button background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.toggle-btn:hover {
+    background: #2ECC71; /* Lighter green on hover */
+}
+
+.city-card.blink {
+    animation: blink-animation 0.5s ease-in-out 3;
+  }
+  
+  @keyframes blink-animation {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  

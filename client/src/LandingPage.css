@@ -1,0 +1,85 @@
+.landing-page {
+    display: flex;
+    height: 100vh;
+    flex-direction: row; /* Ensures the layout is left and right */
+}
+
+.left-side {
+    flex: 1;
+    background-image: url('../public/backdrop.png'); /* Ensure this image is in the public folder */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Stack the logo, form, and button vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Add padding to create space around the form */
+}
+
+.logo-image {
+    width: 200px; /* Adjust the width of the logo */
+    margin-bottom: 20px; /* Space between the logo and the form */
+}
+
+.login-form {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.login-form input {
+    width: 92%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background: #27AE60; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.login-form button:hover {
+    background: #2ECC71; /* Lighter green on hover */
+}
+
+.google-signin-btn {
+    background: #2980B9; /* Deep sky blue background */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin-top: 20px; /* Space between form and Google button */
+}
+
+.google-signin-btn:hover {
+    background: #3498DB; /* Lighter sky blue on hover */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #2C3E50; /* Deep teal */
+    color: white;
+}
